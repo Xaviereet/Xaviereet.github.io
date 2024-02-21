@@ -44,6 +44,10 @@ footer {
     color: #fff;
 }
 
+footer a{
+    color: white;
+}
+
 #idiomas {
     background-color: #f4f4f4;
     padding: 20px;
