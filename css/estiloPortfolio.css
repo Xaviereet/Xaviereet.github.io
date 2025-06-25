@@ -19,6 +19,11 @@
 }
 
 body {
+    background-image: url("../Assets/background.jpg"); /* Ruta a tu imagen */
+    background-size: cover;       /* Ajusta la imagen al tamaño del viewport */
+    background-repeat: no-repeat; /* No se repite */
+    background-attachment: fixed; /* Imagen fija al hacer scroll */
+    background-position: center;
     font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.6;
     color: var(--text);
@@ -224,9 +229,69 @@ section:last-child {
     border-color: #007bff;
 }
 
+.project-section {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.section-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #555;
+    transition: transform 0.3s ease;
+    padding: 0.5rem;
+}
+
+.toggle-btn:hover {
+    color: #333;
+}
+
+.toggle-icon {
+    transition: transform 0.3s ease;
+}
+
+.toggle-icon.expanded {
+    transform: rotate(180deg);
+}
+
+.projects-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+}
+
+.projects-content.expanded {
+    max-height: 5000px;
+    padding: 0 1.5rem 1.5rem; /* Padding solo en los lados y abajo */
+}
+
 @media (max-width: 768px) {
     .container {
         border-radius: 0;
+        padding: 0;
     }
     
     header {
@@ -243,8 +308,11 @@ section:last-child {
     
     .contact-info {
         flex-direction: column;
-        align-items: center;
-        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .header-content {
+        padding: 0 1rem;
     }
     
     .header-content h2 {

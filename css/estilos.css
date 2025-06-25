@@ -19,6 +19,11 @@
 }
 
 body {
+    background-image: url("../Assets/background.jpg"); /* Ruta a tu imagen */
+    background-size: cover;       /* Ajusta la imagen al tamaño del viewport */
+    background-repeat: no-repeat; /* No se repite */
+    background-attachment: fixed; /* Imagen fija al hacer scroll */
+    background-position: center;
     font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.6;
     color: var(--text);

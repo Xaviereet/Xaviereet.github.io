@@ -34,9 +34,46 @@
 </header>
 
         <main>
-            <section id="projects">
-                <h2><i class="fas fa-project-diagram"></i> Proyectos DAM 2º</h2>
-                <div class="projects-grid">
+            <!-- Proyectos Generales -->
+            <section class="project-section">
+    <div class="section-header">
+        <h2><i class="fas fa-project-diagram"></i>Proyectos</h2>
+        <button class="toggle-btn" aria-expanded="false" aria-controls="old-projects-content">
+            <i class="fas fa-chevron-down toggle-icon"></i>
+        </button>
+    </div>
+        <div id="old-projects-content" class="projects-content">
+        <div class="projects-grid">
+                    <!-- TasK -->
+                    <div class="project-card">
+                        <div class="project-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <h3>TasK</h3>
+                        <p>App multiplataforma de gestión de tareas.</p>
+                        <div class="project-tech">
+                            <span>Django</span>
+                            <span>React Native</span>
+                            <span>Docker</span>
+                            <span>MySQL</span>
+                        </div>
+                        <a href="https://gitlab.com/practiquesupv/tasks" target="_blank" class="project-link">
+                            Ver proyecto <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Proyectos DAM 2º -->
+<section class="project-section">
+    <div class="section-header">
+        <h2><i class="fas fa-project-diagram"></i> Proyectos DAM 2º</h2>
+        <button class="toggle-btn" aria-expanded="false" aria-controls="projects-content">
+            <i class="fas fa-chevron-down toggle-icon"></i>
+        </button>
+    </div>
+    <div id="projects-content" class="projects-content">
+        <div class="projects-grid">
                     <!-- Proyecto TFC -->
                     <div class="project-card">
                         <div class="project-icon">
@@ -151,12 +188,20 @@
                             Ver proyecto <i class="fas fa-external-link-alt"></i>
                         </a>
                     </div>
+                    </div>
                 </div>
             </section>
 
-            <section id="old-projects">
-                <h2><i class="fas fa-archive"></i> Proyectos DAM 1º</h2>
-                <div class="projects-grid">
+            <!-- Proyectos DAM 1º -->
+<section class="project-section">
+    <div class="section-header">
+        <h2><i class="fas fa-archive"></i> Proyectos DAM 1º</h2>
+        <button class="toggle-btn" aria-expanded="false" aria-controls="old-projects-content">
+            <i class="fas fa-chevron-down toggle-icon"></i>
+        </button>
+    </div>
+    <div id="old-projects-content" class="projects-content">
+        <div class="projects-grid">
                     <!-- Bola de Drac -->
                     <div class="project-card">
                         <div class="project-icon">
@@ -234,11 +279,13 @@
                             Ver proyecto <i class="fas fa-external-link-alt"></i>
                         </a>
                     </div>
+        </div>
                 </div>
             </section>
         </main>
     </div>
     <script src="js/language.js"></script>
+    <script src="js/accordion.js"></script>
 </body>
 
 </html>
